@@ -8,16 +8,17 @@ namespace EmployeeWageProblem
 {
     class Program
     {
-        public const int IS_Full_Time = 1, IS_Part_Time = 2, Emp_Rate_Per_Hrs = 20, Num_Of_Working_Days = 20;
-        public const int Max_Hrs_In_Month = 100;
+        public const int IS_Full_Time = 1;
+        public const int IS_Part_Time = 2;
 
-        public static int ComputeEmpWage()
+
+        public static int ComputeEmpWage(string company,int empRatePerHours,int numOfWorkingDays,int maxHoursPerMonth)
         {
             //Constants
             int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
 
             //varibles
-            while (totalEmpHrs <= Max_Hrs_In_Month && totalWorkingDays < Num_Of_Working_Days)
+            while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDays < numOfWorkingDays)
             {
                 Random r = new Random();
                 int empCheck = r.Next(0, 3);
@@ -37,7 +38,7 @@ namespace EmployeeWageProblem
                 Console.WriteLine("Day# :" + totalWorkingDays + "Emp Hrs :  " + empHrs);
                 totalWorkingDays++;
             }
-            int totalEmpWage = totalEmpHrs * Emp_Rate_Per_Hrs;
+            int totalEmpWage = totalEmpHrs * empRatePerHours;
             Console.WriteLine("Total Employee Wage : " + totalEmpWage);
             return totalEmpWage;
 
@@ -45,7 +46,8 @@ namespace EmployeeWageProblem
 
         static void Main(string[] args)
         {
-            ComputeEmpWage();
+            ComputeEmpWage("Dmart",20,2,10);
+            ComputeEmpWage("Reliance",10,4,20);
             Console.ReadLine();
         }
            
