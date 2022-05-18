@@ -11,7 +11,7 @@ namespace EmployeeWageProblem
         static void Main(string[] args)
         {
             //Constants
-            int IS_Full_Time = 1, Emp_Rate_Per_Hr = 20;
+            int IS_Full_Time = 1, IS_Part_Time = 2, Emp_Rate_Per_Hr = 20;
             //varibles
             int empHrs = 0 ,empWage = 0;
             Random r = new Random();
@@ -20,6 +20,10 @@ namespace EmployeeWageProblem
             if (empCheck == IS_Full_Time)
             {
                 empHrs = 8;
+            }
+            else if(empCheck == IS_Part_Time)
+            {
+                empHrs = 4; 
             }
             else
             {
