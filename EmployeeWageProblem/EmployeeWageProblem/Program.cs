@@ -11,18 +11,22 @@ namespace EmployeeWageProblem
         static void Main(string[] args)
         {
             //Constants
-            int IS_Full_Time = 0;
+            int IS_Full_Time = 1, Emp_Rate_Per_Hr = 20;
+            //varibles
+            int empHrs = 0 ,empWage = 0;
             Random r = new Random();
             int empCheck = r.Next(0, 2);
-            
-            if(empCheck == IS_Full_Time)
+
+            if (empCheck == IS_Full_Time)
             {
-                Console.WriteLine("Employee is Present");
+                empHrs = 8;
             }
             else
             {
-                Console.WriteLine("Employee is Absent");
+                empHrs = 0;
             }
+            empWage = empHrs + Emp_Rate_Per_Hr;
+            Console.WriteLine("Employee Wage : " + empWage);
             Console.ReadLine();
         }
     }
