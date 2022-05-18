@@ -11,11 +11,12 @@ namespace EmployeeWageProblem
         public const int IS_Full_Time = 1, IS_Part_Time = 2, Emp_Rate_Per_Hrs = 20, Num_Of_Working_Days = 20;
         public const int Max_Hrs_In_Month = 100;
 
-        static void Main(string[] args)
+        public static int ComputeEmpWage()
         {
             //Constants
-            //varibles
             int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
+
+            //varibles
             while (totalEmpHrs <= Max_Hrs_In_Month && totalWorkingDays < Num_Of_Working_Days)
             {
                 Random r = new Random();
@@ -38,8 +39,15 @@ namespace EmployeeWageProblem
             }
             int totalEmpWage = totalEmpHrs * Emp_Rate_Per_Hrs;
             Console.WriteLine("Total Employee Wage : " + totalEmpWage);
+            return totalEmpWage;
 
+        }
+
+        static void Main(string[] args)
+        {
+            ComputeEmpWage();
             Console.ReadLine();
         }
+           
     }
 }
