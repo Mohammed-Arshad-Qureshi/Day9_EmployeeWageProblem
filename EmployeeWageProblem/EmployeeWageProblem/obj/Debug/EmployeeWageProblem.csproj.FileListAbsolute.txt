@@ -1,0 +1,7 @@
+E:\Visual_Studio\Day-9\EmployeeWageProblem\EmployeeWageProblem\bin\Debug\EmployeeWageProblem.exe.config
+E:\Visual_Studio\Day-9\EmployeeWageProblem\EmployeeWageProblem\bin\Debug\EmployeeWageProblem.exe
+E:\Visual_Studio\Day-9\EmployeeWageProblem\EmployeeWageProblem\bin\Debug\EmployeeWageProblem.pdb
+E:\Visual_Studio\Day-9\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\EmployeeWageProblem.csproj.AssemblyReference.cache
+E:\Visual_Studio\Day-9\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\EmployeeWageProblem.csproj.CoreCompileInputs.cache
+E:\Visual_Studio\Day-9\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\EmployeeWageProblem.exe
+E:\Visual_Studio\Day-9\EmployeeWageProblem\EmployeeWageProblem\obj\Debug\EmployeeWageProblem.pdb
