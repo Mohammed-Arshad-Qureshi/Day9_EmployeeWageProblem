@@ -10,12 +10,10 @@ namespace EmployeeWageProblem
     {
         static void Main(string[] args)
         {
-            Program p1 = new Program("Dmart",20,2,10);
-            p1.ComputeEmpWage();
-            Console.WriteLine(p1.details());
-            Program p2 = new Program("Reliance", 10, 4, 20);
-            p2.ComputeEmpWage();
-            Console.WriteLine(p2.details());
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+            empWageBuilder.addCompanyWage("Dmart", 20, 2, 10);
+            empWageBuilder.addCompanyWage("Reliance", 10, 4, 20);
+            empWageBuilder.computeEmpWage();
             Console.ReadLine();
         }
 
