@@ -13,19 +13,19 @@ namespace EmployeeWageProblem
         public const int IS_Part_Time = 2;
 
         private int numOfCompany = 0;
-        //private CompanyEmpWage[] companyEmpWageArray;
         private List<CompanyEmpWage> arr;
+        private Dictionary<string, CompanyEmpWage> companyToEmpWageMap;
 
         public EmpWageBuilderArray()
         {
-            //this.companyEmpWageArray = new CompanyEmpWage[5];
             this.arr = new List<CompanyEmpWage>();
+            this.companyToEmpWageMap = new Dictionary<string, CompanyEmpWage>();
         }
         public void addCompanyWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             CompanyEmpWage companyEmpWage = new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
             this.arr.Add(companyEmpWage);
-            numOfCompany++;
+            this.companyToEmpWageMap.Add(company, companyEmpWage);
         }
         public void computeEmpWage()
         {
@@ -63,9 +63,13 @@ namespace EmployeeWageProblem
                 totalWorkingDays++;
             }
             return totalEmpHrs * computeEmpWage.empRatePerHour;
-
-
         }
+        public int getTotalWage(string company)
+        {
+            return this.companyToEmpWageMap[company].totalEmpWage;
+        }
+
     }
+
 
 }
