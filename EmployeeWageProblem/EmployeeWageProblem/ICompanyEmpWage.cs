@@ -8,7 +8,7 @@ namespace EmployeeWageProblem
 {
     interface ICompanyEmpWage
     {
-        void addCompanyWage(string company, int empRatePerHours, int numOfWorkingDays, int maxHoursPerMonth);
+        void addCompanyWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth);
         void computeEmpWage();
         int computeEmpWage(CompanyEmpWage computeEmpWage);
 

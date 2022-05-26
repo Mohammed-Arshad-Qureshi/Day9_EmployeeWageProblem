@@ -21,9 +21,9 @@ namespace EmployeeWageProblem
             //this.companyEmpWageArray = new CompanyEmpWage[5];
             this.arr = new List<CompanyEmpWage>();
         }
-        public void addCompanyWage(string company, int empRatePerHours, int numOfWorkingDays, int maxHoursPerMonth)
+        public void addCompanyWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
-            CompanyEmpWage companyEmpWage = new CompanyEmpWage(company, empRatePerHours, numOfWorkingDays, maxHoursPerMonth);
+            CompanyEmpWage companyEmpWage = new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
             this.arr.Add(companyEmpWage);
             numOfCompany++;
         }
@@ -32,7 +32,7 @@ namespace EmployeeWageProblem
             foreach (CompanyEmpWage data in arr)
             {
                 data.setTotalWage(this.computeEmpWage(data));
-                Console.WriteLine(data.details());
+                Console.WriteLine(data.details() + "\n\n");
 
             }
         }
@@ -59,10 +59,10 @@ namespace EmployeeWageProblem
                         break;
                 }
                 totalEmpHrs = totalEmpHrs + empHrs;
-                Console.WriteLine("Day# :" + totalWorkingDays + "Emp Hrs :  " + empHrs);
+                Console.WriteLine("Day# : " + totalWorkingDays + "Emp Hrs :  " + empHrs + "   for day  ---   Salary : " + empHrs * computeEmpWage.empRatePerHour);
                 totalWorkingDays++;
             }
-            return totalEmpHrs * computeEmpWage.empRatePerHours;
+            return totalEmpHrs * computeEmpWage.empRatePerHour;
 
 
         }

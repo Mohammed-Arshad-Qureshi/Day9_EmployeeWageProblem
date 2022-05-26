@@ -9,15 +9,15 @@ namespace EmployeeWageProblem
     class CompanyEmpWage
     {
         public string company;
-        public int empRatePerHours;
+        public int empRatePerHour;
         public int numOfWorkingDays;
         public int maxHoursPerMonth;
         public int totalEmpWage;
 
-        public CompanyEmpWage(string company, int empRatePerHours, int numOfWorkingDays, int maxHoursPerMonth)
+        public CompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             this.company = company;
-            this.empRatePerHours = empRatePerHours;
+            this.empRatePerHour = empRatePerHour;
             this.numOfWorkingDays = numOfWorkingDays;
             this.maxHoursPerMonth = maxHoursPerMonth;
 
@@ -29,7 +29,7 @@ namespace EmployeeWageProblem
 
         public string details()
         {
-            return "Total Emp wage for Company : " + this.company + "is : " + this.totalEmpWage;
+            return "TOTAL EMPLOYEE WAGE FOR COMPANY : " + this.company + "IS : " + this.totalEmpWage;
         }
            
     }
