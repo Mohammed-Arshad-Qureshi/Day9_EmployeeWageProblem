@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmpWageBuilderArray.cs" />
+    <Compile Include="ICompanyEmpWage.cs" />
     <Compile Include="MainClass.cs" />
     <Compile Include="CompanyEmpWage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
